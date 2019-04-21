@@ -11,15 +11,16 @@
     >
       <v-custom-side-bar app></v-custom-side-bar>
     </v-navigation-drawer>
-    <v-toolbar fixed app clipped-left>
-      <v-toolbar-side-icon @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
-      <v-toolbar-title>
-        <img :src="require('@/assets/logo.png')" height="30" style = "margin-top:10px;margin-right:15px">
+    <v-toolbar fixed app clipped-left dark>
+      <v-toolbar-side-icon @click.stop="sideNav = !sideNav" dark></v-toolbar-side-icon>
+      <v-toolbar-title style = "margin-right:15px">
+        <!--<img :src="require('@/assets/logo.png')" height="30" style = "margin-top:10px;margin-right:15px">-->
+        openbiox
       </v-toolbar-title>
       <div v-for="(link, href) in links" :key="link">
         <router-link v-if="link != 'Docs'"  :to="href" >
           <v-btn
-            color="black"
+            color="white"
             flat
             round
             class="without-text-transform"
